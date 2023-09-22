@@ -1,0 +1,240 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.contenedor{
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    background-image: linear-gradient(rgba(86, 76, 235, 0.5),rgba(103, 123, 181, 0.75)),url(img/fondo-contacto.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 3%;
+    text-align: center;
+}
+
+header .logo a{
+    font-size: 72px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: black;
+    color: burlywood;
+    opacity: 70%;
+}
+
+header .logo p{
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+header nav{
+    position: absolute;
+    right: 4%;
+}
+
+header nav a{
+    font-size: 40px;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    opacity: 70%;
+}
+
+.ok{
+    text-align: center;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+section .pie{
+    position: absolute;
+    bottom: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    user-select: none;
+}
+
+section .pie a{
+    color: black;
+    cursor: pointer;
+}
+
+section .izquierda form{
+    display: flex;
+    flex-direction: column;
+    max-height: 700px;
+    max-width: 600px;
+}
+
+::placeholder{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    opacity: 40%;
+}
+
+section .izquierda input{
+    background-color: rgb(68, 68, 157);
+    border: none;
+    padding: 15px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+section .izquierda textarea{
+    margin-top: 10px;
+    background-color: rgb(68, 68, 157);
+    color: white;
+    font-weight: bold;
+    resize: none;
+}
+
+section .izquierda .envio{
+    display: flex;
+    justify-content: center;
+}
+
+section .izquierda .envio input{
+    padding: 20px;
+    background-color: lightblue;
+    color: black;
+    width: 150px;
+    cursor: pointer;
+}
+
+section .izquierda .envio input:hover{
+    background-color: burlywood;
+    color: black;
+    transition: .9s;
+}
+
+section .derecha{
+    max-height: 700px;
+    max-width: 600px;
+    background-color: white;
+    margin-left: 20px;
+    border-radius: 30px;
+}
+
+section .derecha .contenido{
+    text-align: center;
+    padding: 30px;
+}
+
+section .derecha .direccion{
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+section .derecha .redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+    position: absolute;
+    left: 48%;
+}
+
+section .derecha .redes a{
+    padding: 5px;
+    border-radius: 50px;
+    background-color: aqua;
+    opacity: 60%;
+    color: black;
+    font-size: 25px;
+    margin-left: 30px;
+}
+
+section .derecha .redes a:hover{
+    background-color: burlywood;
+    color: black;
+    transition: .7s;
+    opacity: 100%;
+}
+
+@media screen and (max-width:425px){
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        min-height: 160vh;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 0;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 5%;
+    }
+    section .izquierda{
+        margin-bottom: 10%;
+    }
+    section .izquierda form{
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        max-height: 500px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    section .izquierda form input{
+        max-width: 220px;
+        font-size: 16px;
+    }
+    section .izquierda form textarea{
+        max-width: 250px;
+    }
+    section .derecha{
+        margin-left: 0;
+        height: 360px;
+        width: 300px;
+    }
+    section .derecha .contenido{
+        padding: 20px;
+        text-align: center;
+    }
+    section .derecha .direccion{
+        margin-top: 15px;
+    }
+    section .derecha .redes{
+        position: fixed;
+        top: 75%;
+        left: 5%;
+    }
+}
